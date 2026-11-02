@@ -1,0 +1,16 @@
+adb_path: "adb"
+device_serial: ""
+mumu_ports:
+  - 16384
+  - 16416
+  - 16448
+  - 16480
+  - 16512
+  - 16544
+  - 16576
+target_width: 720
+target_height: 1280
+capture_interval_ms: 500
+screenshot_dir: "data/screenshots"
+log_file: "logs/thunderagent.log"
+allow_manual_input: false
