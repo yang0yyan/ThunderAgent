@@ -1,4 +1,4 @@
-adb_path: "adb"
+adb_path: "./platform-tools/adb"
 device_serial: ""
 mumu_ports:
   - 16384

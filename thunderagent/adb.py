@@ -46,12 +46,12 @@ class AdbClient:
                 try:
                     subprocess.run(
                         [self.adb_path, "connect", candidate],
-                        capture_output=True, text=True, timeout=5, check=False
+                        capture_output=True, text=True,encoding="utf-8", timeout=5, check=False
                     )
                 except (FileNotFoundError, subprocess.TimeoutExpired):
                     pass
             devices = subprocess.run(
-                [self.adb_path, "devices"], capture_output=True, text=True,
+                [self.adb_path, "devices"], capture_output=True, text=True,encoding="utf-8",
                 timeout=8, check=False
             )
             if devices.returncode != 0:
