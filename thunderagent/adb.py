@@ -120,3 +120,13 @@ class AdbClient:
             ).strip()
         except AdbError:
             return None
+
+    def startApp(self):
+        self._run(["shell","am","start","-n","com.a5game.ltzj.jj/com.xxx.sdk.GamePrivacyActivity"])
+
+    def stopApp(self):
+        self._run(["shell","am","force-stop","com.a5game.ltzj.jj"])
+
+    def restartApp(self):
+        self.stopApp()
+        self.startApp()
